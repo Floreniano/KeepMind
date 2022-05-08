@@ -34,9 +34,6 @@ $(document).ready(function () {
   }
   animScroll();
 
-  const contacts = document.querySelector('.contacts');
-  console.log(contacts.offsetHeight);
-
   function initSlider() {
     const titles = Array.from(document.querySelectorAll('.h2'));
     let titlesText = [''];
@@ -84,17 +81,11 @@ $(document).ready(function () {
       const swipeSlide = swiperItems.find((item) => item.classList.contains('swiper-slide-active'));
       const body = document.body;
       const swiperPagination = document.querySelector('.swiper-pagination');
-      const aside = document.querySelector('.aside');
       const counterSlide = document.querySelector('.counter_slide');
       const contentFixed = document.querySelector('.content-fixed');
       if (!swipeSlide.classList.contains('swiper-main')) {
         contentFixed.classList.remove('none');
         swiperPagination.classList.remove('none');
-        if (swipeSlide.classList.contains('contacts-slide')) {
-          aside.classList.add('aside-contacts');
-        }
-        aside.classList.remove('hide');
-        aside.style.setProperty('--hide', '0s');
         counterSlide.classList.add('show');
         body.classList.remove('first-screen-view');
         body.classList.add('content-view');
@@ -117,7 +108,6 @@ $(document).ready(function () {
 
         header.classList.add('white');
         swiperPagination.classList.add('white');
-        aside.classList.add('white');
         logo.src = './assets/SVG/logo_2.svg';
         contentFixed.classList.add('white');
         logoFixed.classList.add('white');
@@ -131,7 +121,6 @@ $(document).ready(function () {
       // Элементы
       const body = document.body;
       const swiperPagination = document.querySelector('.swiper-pagination');
-      const aside = document.querySelector('.aside');
       const counterSlide = document.querySelector('.counter_slide');
       const contentFixed = document.querySelector('.content-fixed');
 
@@ -144,8 +133,6 @@ $(document).ready(function () {
         let currentTransform = swiperWrapper.style.transform;
         swiperWrapper.style.transform = 'translate3d(0px, 0px, 0px)';
         setTimeout(() => (swiperWrapper.style.transform = currentTransform), 1000);
-        aside.classList.remove('hide');
-        aside.style.setProperty('--hide', '1.6s');
         setTimeout(() => {
           body.classList.add('content-view');
           body.classList.remove('first-screen-view');
@@ -173,7 +160,6 @@ $(document).ready(function () {
       // Элементы
       const body = document.body;
       const swiperPagination = document.querySelector('.swiper-pagination');
-      const aside = document.querySelector('.aside');
       const counterSlide = document.querySelector('.counter_slide');
       const contentFixed = document.querySelector('.content-fixed');
 
@@ -182,20 +168,11 @@ $(document).ready(function () {
       const logo = document.querySelector('.header_logo-img');
       const logoFixed = document.querySelector('.content-fixed-kkep-img');
 
-      if (swipeSlide.ariaLabel === `${swiperItems.length} / ${swiperItems.length}`) {
-        aside.classList.add('aside-contacts');
-        aside.style.setProperty('--hide', '0s');
-      } else {
-        aside.classList.remove('aside-contacts');
-      }
-
       // Скрол на первый слайд
       if (swipeSlide.ariaLabel[0] === `1`) {
         body.classList.add('first-screen-view');
         body.classList.remove('content-view');
         swiperPagination.classList.add('none');
-        aside.classList.add('hide');
-        aside.style.setProperty('--hide', '0s');
         counterSlide.classList.remove('show');
         contentFixed.classList.add('none');
         animateHidden.forEach((item) => {
@@ -208,7 +185,6 @@ $(document).ready(function () {
         setTimeout(() => {
           header.classList.add('white');
           swiperPagination.classList.add('white');
-          aside.classList.add('white');
           logo.src = './assets/SVG/logo_2.svg';
           contentFixed.classList.add('white');
           logoFixed.classList.add('white');
@@ -216,7 +192,6 @@ $(document).ready(function () {
       } else {
         header.classList.remove('white');
         swiperPagination.classList.remove('white');
-        aside.classList.remove('white');
         logo.src = './assets/SVG/logo_1.svg';
         contentFixed.classList.remove('white');
         logoFixed.classList.remove('white');

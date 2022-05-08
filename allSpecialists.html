@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/allSpecialists.css" />
+    <title>Наши специалисты</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner animate">
+                <div class="adaptive_menu cursor">
+                    <span></span>
+                </div>
+                <div class="adaptive_back">
+                    <ul class="adaptive_nav white">
+                        <li class="adaptive_nav-item">
+                            <a href="#courses" class="adaptive_nav-link">Курсы</a>
+                        </li>
+                        <li class="adaptive_nav-item">
+                            <a href="#aboutUs" class="adaptive_nav-link">О Нас</a>
+                        </li>
+                        <li class="adaptive_nav-item">
+                            <a href="#start" class="adaptive_nav-link">С чего начать?</a>
+                        </li>
+                        <li class="adaptive_nav-item">
+                            <a href="#curators" class="adaptive_nav-link">Наши кураторы</a>
+                        </li>
+                        <li class="adaptive_nav-item">
+                            <a href="#questions" class="adaptive_nav-link">Кто ответит на все ваши вопросы</a>
+                        </li>
+                        <li class="adaptive_nav-item">
+                            <a href="#FAQ" class="adaptive_nav-link">FAQ</a>
+                        </li>
+                        <li class="adaptive_nav-item">
+                            <a href="#events" class="adaptive_nav-link">События и акции</a>
+                        </li>
+                        <li class="adaptive_nav-item">
+                            <a href="#contacts" class="adaptive_nav-link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="/" class="header_logo-link white animate">
+                    <img class="header_logo-img" src="./assets/SVG/logo_1.svg" alt="logo">
+                </a>
+                <div class="counter_slide none">
+                    <div class="counter_slide-current"></div>
+                    <span>— </span>
+                    <div class="counter_slide-total"></div>
+                </div>
+                <div class="header__inner-right animate">
+                    <div class="header_courses">
+                        <span>Все курсы</span>
+                    </div>
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <a href="" class="header__list-link">О нас</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="" class="header__list-link">Наши специалисты</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="" class="header__list-link">События и акции</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="" class="header__list-link">Контакты</a>
+                        </li>
+                    </ul>
+                    <span class="header_translate" data-google-lang="en">en</span>
+                    <button class="button communication">
+                        <span>Связаться</span>
+                        <div class="communication_active"></div>
+                    </button>
+                    <a href="" class="profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="profile-icon" viewBox="0 0 20 23.6">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M10.05,21.79a16.6,16.6,0,0,0,6.06-1,8.63,8.63,0,0,0,1.61-.93,1.11,1.11,0,0,0,.45-1.09,8.23,8.23,0,0,0-2.38-5.43.92.92,0,0,1,.34-1.58.9.9,0,0,1,.93.26,9.79,9.79,0,0,1,2.69,4.89A13.93,13.93,0,0,1,20,18.69a3,3,0,0,1-1.38,2.78A10.08,10.08,0,0,1,15,23a21,21,0,0,1-6.47.52,16.8,16.8,0,0,1-5.55-1.22,9.27,9.27,0,0,1-1.38-.76A3.22,3.22,0,0,1,0,18.39,10.09,10.09,0,0,1,2.91,12a.91.91,0,0,1,1.56.35,1,1,0,0,1-.3,1,7.35,7.35,0,0,0-1.94,3.27,20.24,20.24,0,0,0-.39,2.2,1,1,0,0,0,.36.91,5.18,5.18,0,0,0,2,1.13A17.91,17.91,0,0,0,10.05,21.79Z" />
+                                    <path
+                                        d="M3.65,6.36A6.36,6.36,0,1,1,10,12.71,6.34,6.34,0,0,1,3.65,6.36ZM10,1.82a4.54,4.54,0,1,0,4.51,4.6A4.57,4.57,0,0,0,10,1.82Z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal_content">
+                <h3 class="h3">Поможем в выборе</h3>
+                <p class="modal_content-text text">Если у вас есть вопросы о формате или вы не знаете, что выбрать,
+                    оставьте свой номер - мы позвоним, чтобы ответить на все ваши вопросы.</p>
+                <form class="modal_form">
+                    <div class="modal_form-item">
+                        <input class="modal-input" type="text" required>
+                        <label class="modal-label">Имя</label>
+                    </div>
+                    <div class="modal_form-item">
+                        <input class="modal-input" type="text" required>
+                        <label class="modal-label">Телефон</label>
+                    </div>
+                    <div class="modal_form-item">
+                        <input class="modal-input" type="text" required>
+                        <label class="modal-label">Email</label>
+                    </div>
+                    <button type="submit" class="modal_form-btn">Связаться</button>
+                </form>
+                <p class="modal_info">Нажимая на кнопку, я соглашаюсь на
+                    <a href="#" class="modal_info-date">обработку персональных данных</a> и с
+                    <a href="#" class="modal_info-regulations">правилами пользования</a>
+                </p>
+            </div>
+            <img src="./assets/1x/lines.png" alt="" class="modal_img">
+        </div>
+    </header>
+
+    <div class="content">
+        <h1 class="h1">Наши специалисты</h1>
+        <div class="content_inner">
+            <div class="specialists_slider-item">
+                <img src="./assets/1x/teacher_2.png" alt="" class="specialists_slider-img">
+                <div class="specialist_bottom">
+                    <div class="specialist_text darkblue">
+                        <span class="specialist_name">Инна Степанова</span>
+                        <span class="specialist_description">Senior Android Developer</span>
+                    </div>
+                    <a href="./specialist.html" class="custom-btn"></a>
+                </div>
+            </div>
+            <div class="specialists_slider-item">
+                <img src="./assets/1x/teacher_2.png" alt="" class="specialists_slider-img">
+                <div class="specialist_bottom">
+                    <div class="specialist_text darkblue">
+                        <span class="specialist_name">Инна Степанова</span>
+                        <span class="specialist_description">Senior Android Developer</span>
+                    </div>
+                    <a href="./specialist.html" class="custom-btn"></a>
+                </div>
+            </div>
+            <div class="specialists_slider-item">
+                <img src="./assets/1x/teacher_2.png" alt="" class="specialists_slider-img">
+                <div class="specialist_bottom">
+                    <div class="specialist_text darkblue">
+                        <span class="specialist_name">Инна Степанова</span>
+                        <span class="specialist_description">Senior Android Developer</span>
+                    </div>
+                    <a href="./specialist.html" class="custom-btn"></a>
+                </div>
+            </div>
+            <div class="specialists_slider-item">
+                <img src="./assets/1x/teacher_2.png" alt="" class="specialists_slider-img">
+                <div class="specialist_bottom">
+                    <div class="specialist_text darkblue">
+                        <span class="specialist_name">Инна Степанова</span>
+                        <span class="specialist_description">Senior Android Developer</span>
+                    </div>
+                    <a href="./specialist.html" class="custom-btn"></a>
+                </div>
+            </div>
+            <div class="specialists_slider-item">
+                <img src="./assets/1x/teacher_2.png" alt="" class="specialists_slider-img">
+                <div class="specialist_bottom">
+                    <div class="specialist_text darkblue">
+                        <span class="specialist_name">Инна Степанова</span>
+                        <span class="specialist_description">Senior Android Developer</span>
+                    </div>
+                    <a href="./specialist.html" class="custom-btn"></a>
+                </div>
+            </div>
+            <div class="specialists_slider-item">
+                <img src="./assets/1x/teacher_2.png" alt="" class="specialists_slider-img">
+                <div class="specialist_bottom">
+                    <div class="specialist_text darkblue">
+                        <span class="specialist_name">Инна Степанова</span>
+                        <span class="specialist_description">Senior Android Developer</span>
+                    </div>
+                    <a href="./specialist.html" class="custom-btn"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer back_darkblue">
+        <div class="footer_left">
+            <h3 class="h3 footer_title">Образовательная<br />платформа KeepMind</h3>
+            <div class="footer_left-logo">
+                <svg class="footer_adaptive-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.87 72.33">
+                    <g>
+                        <g>
+                            <path class="cls-w"
+                                d="M.16,33.88C.08,32.67,0,31.46,0,30.25A30.82,30.82,0,0,1,14.09,4.49,27.27,27.27,0,0,1,26,.2c10.27-1.09,18.79,2.36,25.65,10,0,0,0,0,0,0l-5.08,0a.5.5,0,0,1-.33-.16A25,25,0,0,0,27.12,3.9a23.37,23.37,0,0,0-8.3,2.3A26.94,26.94,0,0,0,3.76,28.55a10.6,10.6,0,0,0,0,2.18v.1a.5.5,0,0,0,0,.34A26.15,26.15,0,0,0,6.79,43.26a25.26,25.26,0,0,0,15.51,13c8.34,2.47,16,.9,22.92-4.35a24.39,24.39,0,0,0,4.07-4c.06-.08.15-.14.17-.25a11.51,11.51,0,0,0,1.43-2,1.83,1.83,0,0,0,.38-.54,15.93,15.93,0,0,0,1-1.7,1.61,1.61,0,0,0,.28-.59,14.6,14.6,0,0,0,1-2.24,27.46,27.46,0,0,0,1.18-3.77c.07-.27,0-.34-.26-.34H37.21c-.17,0-.32,0-.37.22-.3,1.69-.61,3.38-.92,5.08l-1,5.57a1.32,1.32,0,0,1-1.45,1.2h-2.4a1.25,1.25,0,0,1-1.32-1.15c-.12-1.13-.2-2.25-.29-3.38-.18-2.18-.35-4.37-.53-6.55l-.66-8Q28,26.27,27.73,23c-.23-2.78-.46-5.57-.68-8.35,0-.2,0-.33-.29-.33s-.3.1-.32.31c-.26,1.87-.51,3.74-.77,5.61-.33,2.33-.66,4.67-1,7-.18,1.29-.36,2.59-.56,3.88a1.25,1.25,0,0,1-1.31,1.09l-2.83,0-5.52.06c0-.79,0-1.58,0-2.37,0-.23.06-.29.29-.29l6.7-.08c.25,0,.34-.06.38-.31q.53-3.9,1.07-7.8c.35-2.46.69-4.91,1-7.37.06-.38.11-.76.16-1.14a1.32,1.32,0,0,1,1.46-1.29l2.59,0A1.31,1.31,0,0,1,29.49,13q.48,5.82,1,11.64l.81,9.9c.28,3.44.56,6.87.85,10.31,0,.29,0,.58.07.87,0,.12,0,.24.17.25s.22-.1.25-.24L33,43.22c.5-2.74,1-5.49,1.51-8.23A1.31,1.31,0,0,1,36,33.88H67.06l35.14,0c.32,0,.39.08.38.39,0,.76,0,1.51,0,2.27H59c-.3,0-.42.08-.47.37a25.29,25.29,0,0,1-1,3.64A30.32,30.32,0,0,1,49,53.64a28.69,28.69,0,0,1-18.69,7.53,27.39,27.39,0,0,1-7.6-.82A28.92,28.92,0,0,1,8.5,52,30.51,30.51,0,0,1,1,38.62,38,38,0,0,1,.16,33.88Z" />
+                            <path class="cls-2"
+                                d="M55.51,49.08a5,5,0,0,1,.42-.95c.24-.54.5-1.08.75-1.62q5.81.84,11.59,1.85A205.88,205.88,0,0,1,91.54,53.6a81.46,81.46,0,0,1,13.63,5.21,4.68,4.68,0,0,1,1.32.73A3.57,3.57,0,0,1,107,61l3.69,11.22a.4.4,0,0,0,0,.13s-.07,0-.09,0a43.5,43.5,0,0,0-9.85-7.41,96.69,96.69,0,0,0-13.36-6.26A208.18,208.18,0,0,0,67.05,52c-3.77-1-7.56-2-11.36-2.91Z" />
+                            <path class="cls-3"
+                                d="M57.74,43.37c.2-.84.44-1.66.58-2.5,0-.24.17-.25.36-.25H76c3.09,0,6.17,0,9.26,0l4.42,0H90l11.38.11a.67.67,0,0,1,.48.16l12.72,11.3c.09.08.17.18.26.27l0,0c-1-.33-2-.69-3-1a100.78,100.78,0,0,0-10.09-2.44c-3.73-.74-7.48-1.35-11.23-1.91-2.95-.44-5.9-.85-8.85-1.21-2.51-.31-5-.62-7.51-.91s-4.77-.53-7.16-.77c-2.79-.3-5.59-.57-8.39-.85Z" />
+                            <path class="cls-4"
+                                d="M56.89,45.92c.22-.65.44-1.3.67-2,2.76.27,5.53.53,8.3.82q3.9.39,7.8.83c3,.34,6,.71,9,1.09,3.17.41,6.33.85,9.49,1.34,4.69.73,9.35,1.54,14,2.6a.45.45,0,0,1,.32.26l6.64,12.21c0,.06,0,.12.07.17l0,0c-.59-.47-1.17-1-1.78-1.41A44.74,44.74,0,0,0,102.63,57a102.33,102.33,0,0,0-14.89-5.05c-5.23-1.39-10.52-2.51-15.85-3.5q-5-.93-10-1.72c-1.63-.25-3.26-.53-4.9-.72C56.94,46,56.92,45.94,56.89,45.92Z" />
+                            <path class="cls-w"
+                                d="M84.06,29.9c.55-3,1.09-6,1.64-9,.4-2.2.81-4.4,1.21-6.61,0-.19.1-.25.29-.25H99.36c.09,0,.22-.06.24.1l-.3,1.56c-.51,2.77-1,5.55-1.52,8.32-.35,1.88-.69,3.75-1,5.63,0,.2-.1.29-.34.29-1,0-2,0-2.92,0q1-5.35,1.94-10.72c.14-.75.26-1.49.42-2.23,0-.24,0-.28-.23-.28q-2.84,0-5.67,0c-.22,0-.3.07-.34.28-.33,1.86-.67,3.71-1,5.57-.44,2.4-.88,4.79-1.31,7.19,0,.14-.08.2-.22.2Z" />
+                            <path class="cls-w"
+                                d="M68.41,25.41c0-.25,0-.36.3-.42.94-.26,1.87-.54,2.8-.82.23-.07.33-.07.31.22a3.54,3.54,0,0,0,.1,1,2.62,2.62,0,0,0,2.41,2,4.13,4.13,0,0,0,3.94-2,6.81,6.81,0,0,0,.9-1.86c.06-.17,0-.22-.17-.22l-4.72,0a16.2,16.2,0,0,1,.33-2c.13-.74.14-.73.9-.74h3.86c.3.07.39-.05.39-.35A6.16,6.16,0,0,0,79.61,19a2.85,2.85,0,0,0-2-2.3,3.87,3.87,0,0,0-1.79,0,4.32,4.32,0,0,0-3,2.29.3.3,0,0,1-.41.19c-.91-.23-1.83-.43-2.75-.64A6.52,6.52,0,0,1,71.24,16a7.62,7.62,0,0,1,5.23-2.26,8,8,0,0,1,2.89.32,5.15,5.15,0,0,1,3.5,4A9.36,9.36,0,0,1,83,21.15a17.06,17.06,0,0,1-.59,2.64,9.37,9.37,0,0,1-4.2,5.36,8.22,8.22,0,0,1-5.75.88,4.48,4.48,0,0,1-3.91-3.77C68.51,26,68.46,25.69,68.41,25.41Z" />
+                            <path class="cls-w"
+                                d="M59.79,20.7a1.85,1.85,0,0,0,1.35-.8,27.06,27.06,0,0,0,1.46-2.35c.38-.64.8-1.26,1.24-1.86A4.14,4.14,0,0,1,66.91,14a14.48,14.48,0,0,1,1.74-.08c.1,0,.22,0,.22.13-.13.65-.27,1.3-.38,2,0,.22-.11.28-.34.27a2.75,2.75,0,0,0-2.88,1.51c-.31.6-.66,1.17-1,1.77a4.7,4.7,0,0,1-2.05,2.13s0,0,0,.07a2.88,2.88,0,0,1,1.45,1.1,56.66,56.66,0,0,1,2.41,6.92.5.5,0,0,1,0,.12c-1.15,0-2.3,0-3.45,0-.23,0-.33-.06-.39-.29-.25-.93-.52-1.86-.77-2.79a20.77,20.77,0,0,0-1.06-3.05A1.32,1.32,0,0,0,59.11,23c-.17,0-.23.05-.26.22-.06.44-.16.88-.24,1.31-.31,1.73-.62,3.45-.94,5.18,0,.14-.06.24-.25.24l-3,0,.78-4.35q1-5.19,1.91-10.4l.09-.52c.13-.61.13-.61.77-.61h2.3c.11,0,.28-.06.25.16a.78.78,0,0,0-.05.14l-1.11,6C59.28,20.82,59.29,20.82,59.79,20.7Z" />
+                            <path class="cls-w" ``
+                                d="M45.77,14h.93c.2,0,.27,0,.23.26q-.59,3.09-1.14,6.18c0,.16-.15.44.23.28A2,2,0,0,0,47.54,20,26,26,0,0,0,49,17.61a20.37,20.37,0,0,1,1.34-2A4.13,4.13,0,0,1,53.41,14c.54-.06,1.09-.05,1.64-.08.21,0,.29.05.24.26-.17.6-.25,1.21-.36,1.82,0,.21-.1.29-.33.28a2.74,2.74,0,0,0-2.91,1.54c-.29.57-.63,1.12-.94,1.68a4.8,4.8,0,0,1-2.07,2.18s0,0,0,.08a2.86,2.86,0,0,1,1.37,1,40.8,40.8,0,0,1,2.3,6.44c.08.24.15.49.23.74H49.05c-.23,0-.3-.08-.36-.28-.26-1-.54-1.94-.8-2.91a20.65,20.65,0,0,0-1-3,1.23,1.23,0,0,0-.91-.74c-.54-.11-.58-.1-.68.44a1.43,1.43,0,0,0,0,.22q-.55,3-1.09,6c0,.2-.1.29-.33.29-1,0-1.95,0-2.93,0L43.5,15.44c.08-.38.15-.77.21-1.16,0-.2.1-.27.31-.27Z" />
+                            <path class="cls-2"
+                                d="M36,44.74a4.19,4.19,0,0,1,.17-1l.09,0c2.48.32,5,.63,7.44,1s4.82.64,7.22,1a11.51,11.51,0,0,1-1.43,2l-7.35-1.62C40.07,45.6,38,45.17,36,44.74Z" />
+                            <path class="cls-3"
+                                d="M36.54,41.5s0,0,0-.06c.08-.26,0-.6.2-.76s.52,0,.78,0h16a14.6,14.6,0,0,1-1,2.24l-5.3-.45Z" />
+                            <path class="cls-4"
+                                d="M36.23,43.18c.06-.36.12-.72.19-1.07l.49,0,8.45.73,6.89.6a15.93,15.93,0,0,1-1,1.7l-4.37-.61-5.52-.72Z" />
+                        </g>
+                    </g>
+                </svg>
+                <span class="content-fixed-kkep-text">Совместно с Краснодарским колледжем<br>
+                    электронного приборостроения</span>
+            </div>
+            <span class="footer_left-text">@ KeepMind, 2022</span>
+        </div>
+        <div class="footer_directions">
+            <h3 class="h3 footer_title">Все направления</h3>
+            <ul class="footer_directions_list">
+                <li class="footer_directions_list-item">Программирование</li>
+                <li class="footer_directions_list-item">Дизайн</li>
+                <li class="footer_directions_list-item">Маркетинг</li>
+                <li class="footer_directions_list-item">Управление</li>
+                <li class="footer_directions_list-item">Игры</li>
+                <li class="footer_directions_list-item">Мультимедия</li>
+                <li class="footer_directions_list-item">Психология</li>
+                <li class="footer_directions_list-item">Общее развитие</li>
+                <li class="footer_directions_list-item">Инженерия</li>
+                <li class="footer_directions_list-item">Другое</li>
+            </ul>
+        </div>
+        <div class="footer_about">
+            <h3 class="h3 footer_title">О KeepMind</h3>
+            <ul class="footer_about_list">
+                <li class="footer_about_list-item">О платформе</li>
+                <li class="footer_about_list-item">Наши специалисты</li>
+                <li class="footer_about_list-item">События и акции</li>
+                <li class="footer_about_list-item">Отзывы</li>
+                <li class="footer_about_list-item">Контакты</li>
+                <li class="footer_about_list-item">Договоры оферты</li>
+                <li class="footer_about_list-item">Оплата</li>
+                <li class="footer_about_list-item">Правила пользования</li>
+                <li class="footer_about_list-item">Политика конфиденциальности</li>
+                <li class="footer_about_list-item">Карта сайта</li>
+            </ul>
+        </div>
+        <div class="footer_social">
+            <ul class="footer_social_list">
+                <li class="footer_social-item">
+                    <a href="" class="footer_social_list-link">
+                        <img class="footer_social_list-image" src="./assets/SVG/vk.svg" alt="vk">
+                    </a>
+                </li>
+                <li class="footer_social-item">
+                    <a href="" class="footer_social_list-link">
+                        <img class="footer_social_list-image" src="./assets/SVG/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li class="footer_social-item">
+                    <a href="" class="footer_social_list-link">
+                        <img class="footer_social_list-image" src="./assets/SVG/insta.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="footer_adaptive">
+            <p class="footer_adaptive-text">Образовательная<br>платформа KeepMind</p>
+            <div class="footer_adaptive-logo">
+                <svg class="footer_adaptive-logo-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114.87 72.33">
+                    <g>
+                        <g>
+                            <path class="cls-w"
+                                d="M.16,33.88C.08,32.67,0,31.46,0,30.25A30.82,30.82,0,0,1,14.09,4.49,27.27,27.27,0,0,1,26,.2c10.27-1.09,18.79,2.36,25.65,10,0,0,0,0,0,0l-5.08,0a.5.5,0,0,1-.33-.16A25,25,0,0,0,27.12,3.9a23.37,23.37,0,0,0-8.3,2.3A26.94,26.94,0,0,0,3.76,28.55a10.6,10.6,0,0,0,0,2.18v.1a.5.5,0,0,0,0,.34A26.15,26.15,0,0,0,6.79,43.26a25.26,25.26,0,0,0,15.51,13c8.34,2.47,16,.9,22.92-4.35a24.39,24.39,0,0,0,4.07-4c.06-.08.15-.14.17-.25a11.51,11.51,0,0,0,1.43-2,1.83,1.83,0,0,0,.38-.54,15.93,15.93,0,0,0,1-1.7,1.61,1.61,0,0,0,.28-.59,14.6,14.6,0,0,0,1-2.24,27.46,27.46,0,0,0,1.18-3.77c.07-.27,0-.34-.26-.34H37.21c-.17,0-.32,0-.37.22-.3,1.69-.61,3.38-.92,5.08l-1,5.57a1.32,1.32,0,0,1-1.45,1.2h-2.4a1.25,1.25,0,0,1-1.32-1.15c-.12-1.13-.2-2.25-.29-3.38-.18-2.18-.35-4.37-.53-6.55l-.66-8Q28,26.27,27.73,23c-.23-2.78-.46-5.57-.68-8.35,0-.2,0-.33-.29-.33s-.3.1-.32.31c-.26,1.87-.51,3.74-.77,5.61-.33,2.33-.66,4.67-1,7-.18,1.29-.36,2.59-.56,3.88a1.25,1.25,0,0,1-1.31,1.09l-2.83,0-5.52.06c0-.79,0-1.58,0-2.37,0-.23.06-.29.29-.29l6.7-.08c.25,0,.34-.06.38-.31q.53-3.9,1.07-7.8c.35-2.46.69-4.91,1-7.37.06-.38.11-.76.16-1.14a1.32,1.32,0,0,1,1.46-1.29l2.59,0A1.31,1.31,0,0,1,29.49,13q.48,5.82,1,11.64l.81,9.9c.28,3.44.56,6.87.85,10.31,0,.29,0,.58.07.87,0,.12,0,.24.17.25s.22-.1.25-.24L33,43.22c.5-2.74,1-5.49,1.51-8.23A1.31,1.31,0,0,1,36,33.88H67.06l35.14,0c.32,0,.39.08.38.39,0,.76,0,1.51,0,2.27H59c-.3,0-.42.08-.47.37a25.29,25.29,0,0,1-1,3.64A30.32,30.32,0,0,1,49,53.64a28.69,28.69,0,0,1-18.69,7.53,27.39,27.39,0,0,1-7.6-.82A28.92,28.92,0,0,1,8.5,52,30.51,30.51,0,0,1,1,38.62,38,38,0,0,1,.16,33.88Z" />
+                            <path class="cls-2"
+                                d="M55.51,49.08a5,5,0,0,1,.42-.95c.24-.54.5-1.08.75-1.62q5.81.84,11.59,1.85A205.88,205.88,0,0,1,91.54,53.6a81.46,81.46,0,0,1,13.63,5.21,4.68,4.68,0,0,1,1.32.73A3.57,3.57,0,0,1,107,61l3.69,11.22a.4.4,0,0,0,0,.13s-.07,0-.09,0a43.5,43.5,0,0,0-9.85-7.41,96.69,96.69,0,0,0-13.36-6.26A208.18,208.18,0,0,0,67.05,52c-3.77-1-7.56-2-11.36-2.91Z" />
+                            <path class="cls-3"
+                                d="M57.74,43.37c.2-.84.44-1.66.58-2.5,0-.24.17-.25.36-.25H76c3.09,0,6.17,0,9.26,0l4.42,0H90l11.38.11a.67.67,0,0,1,.48.16l12.72,11.3c.09.08.17.18.26.27l0,0c-1-.33-2-.69-3-1a100.78,100.78,0,0,0-10.09-2.44c-3.73-.74-7.48-1.35-11.23-1.91-2.95-.44-5.9-.85-8.85-1.21-2.51-.31-5-.62-7.51-.91s-4.77-.53-7.16-.77c-2.79-.3-5.59-.57-8.39-.85Z" />
+                            <path class="cls-4"
+                                d="M56.89,45.92c.22-.65.44-1.3.67-2,2.76.27,5.53.53,8.3.82q3.9.39,7.8.83c3,.34,6,.71,9,1.09,3.17.41,6.33.85,9.49,1.34,4.69.73,9.35,1.54,14,2.6a.45.45,0,0,1,.32.26l6.64,12.21c0,.06,0,.12.07.17l0,0c-.59-.47-1.17-1-1.78-1.41A44.74,44.74,0,0,0,102.63,57a102.33,102.33,0,0,0-14.89-5.05c-5.23-1.39-10.52-2.51-15.85-3.5q-5-.93-10-1.72c-1.63-.25-3.26-.53-4.9-.72C56.94,46,56.92,45.94,56.89,45.92Z" />
+                            <path class="cls-w"
+                                d="M84.06,29.9c.55-3,1.09-6,1.64-9,.4-2.2.81-4.4,1.21-6.61,0-.19.1-.25.29-.25H99.36c.09,0,.22-.06.24.1l-.3,1.56c-.51,2.77-1,5.55-1.52,8.32-.35,1.88-.69,3.75-1,5.63,0,.2-.1.29-.34.29-1,0-2,0-2.92,0q1-5.35,1.94-10.72c.14-.75.26-1.49.42-2.23,0-.24,0-.28-.23-.28q-2.84,0-5.67,0c-.22,0-.3.07-.34.28-.33,1.86-.67,3.71-1,5.57-.44,2.4-.88,4.79-1.31,7.19,0,.14-.08.2-.22.2Z" />
+                            <path class="cls-w"
+                                d="M68.41,25.41c0-.25,0-.36.3-.42.94-.26,1.87-.54,2.8-.82.23-.07.33-.07.31.22a3.54,3.54,0,0,0,.1,1,2.62,2.62,0,0,0,2.41,2,4.13,4.13,0,0,0,3.94-2,6.81,6.81,0,0,0,.9-1.86c.06-.17,0-.22-.17-.22l-4.72,0a16.2,16.2,0,0,1,.33-2c.13-.74.14-.73.9-.74h3.86c.3.07.39-.05.39-.35A6.16,6.16,0,0,0,79.61,19a2.85,2.85,0,0,0-2-2.3,3.87,3.87,0,0,0-1.79,0,4.32,4.32,0,0,0-3,2.29.3.3,0,0,1-.41.19c-.91-.23-1.83-.43-2.75-.64A6.52,6.52,0,0,1,71.24,16a7.62,7.62,0,0,1,5.23-2.26,8,8,0,0,1,2.89.32,5.15,5.15,0,0,1,3.5,4A9.36,9.36,0,0,1,83,21.15a17.06,17.06,0,0,1-.59,2.64,9.37,9.37,0,0,1-4.2,5.36,8.22,8.22,0,0,1-5.75.88,4.48,4.48,0,0,1-3.91-3.77C68.51,26,68.46,25.69,68.41,25.41Z" />
+                            <path class="cls-w"
+                                d="M59.79,20.7a1.85,1.85,0,0,0,1.35-.8,27.06,27.06,0,0,0,1.46-2.35c.38-.64.8-1.26,1.24-1.86A4.14,4.14,0,0,1,66.91,14a14.48,14.48,0,0,1,1.74-.08c.1,0,.22,0,.22.13-.13.65-.27,1.3-.38,2,0,.22-.11.28-.34.27a2.75,2.75,0,0,0-2.88,1.51c-.31.6-.66,1.17-1,1.77a4.7,4.7,0,0,1-2.05,2.13s0,0,0,.07a2.88,2.88,0,0,1,1.45,1.1,56.66,56.66,0,0,1,2.41,6.92.5.5,0,0,1,0,.12c-1.15,0-2.3,0-3.45,0-.23,0-.33-.06-.39-.29-.25-.93-.52-1.86-.77-2.79a20.77,20.77,0,0,0-1.06-3.05A1.32,1.32,0,0,0,59.11,23c-.17,0-.23.05-.26.22-.06.44-.16.88-.24,1.31-.31,1.73-.62,3.45-.94,5.18,0,.14-.06.24-.25.24l-3,0,.78-4.35q1-5.19,1.91-10.4l.09-.52c.13-.61.13-.61.77-.61h2.3c.11,0,.28-.06.25.16a.78.78,0,0,0-.05.14l-1.11,6C59.28,20.82,59.29,20.82,59.79,20.7Z" />
+                            <path class="cls-w" ``
+                                d="M45.77,14h.93c.2,0,.27,0,.23.26q-.59,3.09-1.14,6.18c0,.16-.15.44.23.28A2,2,0,0,0,47.54,20,26,26,0,0,0,49,17.61a20.37,20.37,0,0,1,1.34-2A4.13,4.13,0,0,1,53.41,14c.54-.06,1.09-.05,1.64-.08.21,0,.29.05.24.26-.17.6-.25,1.21-.36,1.82,0,.21-.1.29-.33.28a2.74,2.74,0,0,0-2.91,1.54c-.29.57-.63,1.12-.94,1.68a4.8,4.8,0,0,1-2.07,2.18s0,0,0,.08a2.86,2.86,0,0,1,1.37,1,40.8,40.8,0,0,1,2.3,6.44c.08.24.15.49.23.74H49.05c-.23,0-.3-.08-.36-.28-.26-1-.54-1.94-.8-2.91a20.65,20.65,0,0,0-1-3,1.23,1.23,0,0,0-.91-.74c-.54-.11-.58-.1-.68.44a1.43,1.43,0,0,0,0,.22q-.55,3-1.09,6c0,.2-.1.29-.33.29-1,0-1.95,0-2.93,0L43.5,15.44c.08-.38.15-.77.21-1.16,0-.2.1-.27.31-.27Z" />
+                            <path class="cls-2"
+                                d="M36,44.74a4.19,4.19,0,0,1,.17-1l.09,0c2.48.32,5,.63,7.44,1s4.82.64,7.22,1a11.51,11.51,0,0,1-1.43,2l-7.35-1.62C40.07,45.6,38,45.17,36,44.74Z" />
+                            <path class="cls-3"
+                                d="M36.54,41.5s0,0,0-.06c.08-.26,0-.6.2-.76s.52,0,.78,0h16a14.6,14.6,0,0,1-1,2.24l-5.3-.45Z" />
+                            <path class="cls-4"
+                                d="M36.23,43.18c.06-.36.12-.72.19-1.07l.49,0,8.45.73,6.89.6a15.93,15.93,0,0,1-1,1.7l-4.37-.61-5.52-.72Z" />
+                        </g>
+                    </g>
+                </svg>
+                <p class="footer_adaptive-logo-text">Совместно с Краснодарским колледжем <br>
+                    электронного приборостроения</p>
+            </div>
+            <p class="footer_adaptive-bottom">@ KeepMind, 2021</p>
+        </div> -->
+    </footer>
+    <script src="./libs/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="./libs/google-translate.js"></script>
+    <script src="./js/allSpecialists.js"></script>
+</body>
+
+</html>

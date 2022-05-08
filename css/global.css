@@ -1,0 +1,123 @@
+:root {
+    --white: #ffffff;
+    --gray: #ecebea;
+    --orange: #f39b30;
+    --red: #e75c52;
+    --blue: #35539c;
+    --darkblue: #1c2049;
+    --black: #181613;
+}
+
+@font-face {
+    font-family: "Proxima Nova Regular";
+    src: url("../assets/Fonts/GothaProMed.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Proxima Nova Regular";
+    src: url("../assets/Fonts/GothaProReg.otf") format("opentype");
+}
+
+body {
+    position: initial !important;
+    top: 0 !important;
+    min-height: initial !important;
+    font-family: Proxima Nova Regular;
+    font-weight: 400;
+    transition: opacity .2s ease;
+}
+
+.skiptranslate, .goog-gt-tt {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+#goog-gt-tt {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.goog-text-highlight {
+    background-color: initial !important;
+    box-shadow: initial !important;
+}
+
+textarea {
+    resize: none;
+}
+
+section {
+    padding-top: 150px;
+    padding-left: 50px;
+    margin-left: 400px;
+    border-left: 1px solid black;
+    height: 100%;
+}
+
+.back_darkblue section {
+    border-left: 1px solid #ffff;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+    outline: none !important;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.text {
+    font-size: 18px;
+}
+
+.button {
+    padding: 9px 15px;
+    background-color: transparent;
+    border: 2px solid var(--blue);
+    border-radius: 30px;
+    font-family: inherit;
+    transition: all 0.4s ease-in-out;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.none {
+    display: none !important;
+}
+
+.h1 {
+    font-size: calc(3vw + 24px);
+}
+
+.h2 {
+    font-size: calc(2vw + 24px);
+    font-weight: 600;
+}
+
+.h3 {
+    font-size: 28px;
+}
+
+.red {
+    color: var(--red) !important;
+}
+
+.darkblue {
+    color: var(--darkblue);
+}
+
+.back_darkblue {
+    background-color: var(--darkblue);
+}
