@@ -204,7 +204,7 @@ $(document).ready(function () {
   }
 
   $('.slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     draggable: false,
     infinite: true,
