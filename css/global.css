@@ -5,7 +5,8 @@
     --red: #e75c52;
     --blue: #35539c;
     --darkblue: #1c2049;
-    --black: #181613;
+    --black: #141813;
+    --green: #1b7c07;
 }
 
 @font-face {
@@ -116,6 +117,14 @@ a {
 
 .darkblue {
     color: var(--darkblue);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.green {
+    color: var(--green);
 }
 
 .back_darkblue {

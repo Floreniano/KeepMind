@@ -101,20 +101,6 @@
     overflow: hidden;
 }
 
-/* .conent_top_outer {
-    position: relative;
-}
-
-.conent_top_outer::after {
-    content: "";
-    position: absolute;
-    background-color: var(--blue);
-    width: 20%;
-    height: 421px;
-    top: 99px;
-    right: 0;
-    z-index: -2;
-} */
 
 .content_top {
     display: flex;
@@ -129,12 +115,49 @@
 
 .content_top_inner-left {
     display: flex;
-    flex-direction: column;
     height: 100%;
+}
+
+.content_top_inner-left-text {
+    display: flex;
+    flex-direction: column;
 }
 
 .content_top_inner-bottom {
     margin-top: auto;
+}
+
+.verification {
+    padding-left: 15px;
+    position: relative;
+}
+
+.verification::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #049610;
+}
+
+.button-test {
+    border-color: var(--white);
+    margin-top: 40px;
+    padding: 15px 25px 15px 25px;
+    align-self: flex-start;
+}
+
+.button-test:hover {
+    background-color: var(--white);
+    color: var(--darkblue);
+}
+
+.verification-error::after {
+    background-color: var(--red);
 }
 
 .content_top-rigth_inner {
@@ -142,6 +165,8 @@
     height: 100%;
     width: 684px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .content_top-rigth_inner::after {
@@ -191,6 +216,37 @@
     padding: 80px 0;
     color: var(--white);
     overflow: hidden;
+}
+
+.slider.empty {
+    position: relative;
+}
+
+.slider.empty::after {
+    position: absolute;
+    content: "У вас пока нет сертификатов";
+    top: 50%;
+    left: 37%;
+    transform: translate(-37%, -50%);
+    font-size: 28px;
+    z-index: 1;
+}
+
+.slider.empty::before {
+    position: absolute;
+    content: "Чтобы получить сертификат нужно пройти курс";
+    top: 60%;
+    left: 37%;
+    transform: translate(-37%, -60%);
+    font-size: 16px;
+    z-index: 2;
+}
+
+.slider_empty {
+    height: 250px;
+    width: 1px;
+    background-color: var(--white);
+    margin: 15px 20px 0 0;
 }
 
 .content-info-list {
@@ -312,8 +368,12 @@
     height: 300px;
     margin: 15px 20px 0 0;
     overflow: hidden;
-    clip-path: polygon(0 0, 85% 0%, 105% 16%, 101% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 85% 0%, 105% 30%, 101% 0%, 100% 100%, 0 100%);
     transition: all 0.5s ease-in-out;
+}
+
+.cards_list-item.hover {
+    clip-path: polygon(0 0, 100% 0%, 105% 16%, 101% 0%, 100% 100%, 0 100%);
 }
 
 .cards_list-btn {
@@ -363,8 +423,37 @@
     margin: 30px auto 0 auto;
 }
 
-@media (max-width: 1330px) {
-    .content_top-rigth_inner {
-        padding: 110px 0px 0px 105px;
+.content_top-rigth {
+    position: relative;
+}
+
+@media (max-width: 1400px) {
+    .content_top_inner {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .content_top_inner-left {
+        margin-bottom: 70px;
+    }
+
+    .content_top-rigth_inner::after {
+        display: none;
+    }
+
+    .content_top {
+        padding-bottom: 200px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .content-info-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-info-list-item+.content-info-list-item {
+        margin-top: 15px;
     }
 }

@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./libs/swiper/swiper.min.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
-    <link rel="stylesheet" href="./css/cabinet_sign.css" />
-    <title>Личный кабинет1</title>
+    <link rel="stylesheet" href="./css/cabinet_payments.css" />
+    <title>Личный кабинет(платежи)</title>
 </head>
 
 <body>
@@ -126,95 +126,88 @@
     </header>
 
     <div class="content">
-        <div class="content_container">
-            <nav class="nav">
-                <ul class="nav_list">
-                    <li class="nav_list-item">
-                        <a href="" class="nav_list-link">Основная</a>
-                    </li>
-                    <li class="nav_list-item">
-                        <a href="" class="nav_list-link">Курсы</a>
-                    </li>
-                    <li class="nav_list-item">
-                        <a href="" class="nav_list-link">Платежи</a>
-                    </li>
-                    <li class="nav_list-item">
-                        <a href="" class="nav_list-link">Настройки профиля</a>
-                    </li>
-                    <li class="nav_list-item">
-                        <a href="" class="nav_list-link">Верификация</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="content_top">
-                <img src="./assets/1x/teacher_1.png" alt="">
-                <div class="content_top_inner">
-                    <div class="content_top_inner-left">
-                        <p class="verification">Аккаунт прошел верификацию</p>
-                        <div class="content_top_inner-bottom darkblue">
-                            <h3 class="h3">Привет,</h3>
-                            <h2 class="h2">
-                                <span class="name">Мария</span>
-                                <br />
-                                <span class="name">Понаморенко</span>
-                            </h2>
-                            <span class="email">idyukimary@mail.ru</span>
-                        </div>
-                    </div>
-                    <div class="content_top-rigth white">
-                        <div class="content_top-rigth_inner">
-                            <h3 class="h3">Маркетолог<br /> по призванию</h3>
-                            <p class="content_top-rigth_inner-text">У вас отлично получается разработать крутейшую
-                                стратегию
-                                продвижения и увеличить прибыль любой компании. Вы будете отличным специалистом в
-                                маркетинге!</p>
-                        </div>
-                        <img class="content_top-rigth-img" src="./assets/1x/touch_back.png" alt="">
-                        <a href="" class="content_top-rigth-button">Выбрать курс</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="content_blue">
-            <div class="content_container full-width">
-                <div class="content-info-list">
-                    <div class="content-info-list-item">
-                        <span class="certificate-count">6</span>
-                        <span class="certificate-text">Сертификатов</span>
-                    </div>
-                    <div class="content-info-list-item">
-                        <span class="lecture-count">254</span>
-                        <span class="lecture-text">Часа лекций<br />прослушано</span>
-                    </div>
-                    <div class="content-info-list-item">
-                        <span class="task-count">15</span>
-                        <span class="task-text">Практических заданий<br>решено</span>
-                    </div>
-                </div>
-            </div>
-            <img src="./assets/1x/lines.png" alt="lines" class="lines-back">
-        </div>
-        <div class="content_gray">
+        <div class="content_top">
             <div class="content_container">
-                <div class="content_gray-left">
-                    <h2 class="h2 darkblue">Сертификаты</h2>
-                    <p class="content_gray-left-text">После каждого пройденного курса вы получаете сертификат. Они
-                        станут дополнительными аргументами при устройстве на работу.</p>
-                </div>
-                <div class="slider">
-                    <img class="certificate-img" src="./assets/1x/teacher_1.png" alt="certificate">
-                    <img class="certificate-img" src="./assets/1x/teacher_2.png" alt="certificate">
-                    <img class="certificate-img" src="./assets/1x/teacher_3.png" alt="certificate">
-                    <img class="certificate-img" src="./assets/1x/teacher_1.png" alt="certificate">
-                    <img class="certificate-img" src="./assets/1x/teacher_2.png" alt="certificate">
-                </div>
+                <nav class="nav">
+                    <ul class="nav_list">
+                        <li class="nav_list-item">
+                            <a href="" class="nav_list-link">Основная</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="" class="nav_list-link">Курсы</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="" class="nav_list-link">Платежи</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="" class="nav_list-link">Настройки профиля</a>
+                        </li>
+                        <li class="nav_list-item">
+                            <a href="" class="nav_list-link">Верификация</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h2 class="h2 darkblue">Платежи</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Купленные курсы</th>
+                            <th>Цена</th>
+                            <th>Дата</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="blue">Разработка на Java. Базовый курс.</td>
+                            <td>6 000 руб.</td>
+                            <td>10.02.2022</td>
+                            <td>
+                                <span class="red">Ждет оплаты</span>
+                                <svg class="waiting-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.42 12.75">
+                                    <defs>
+                                        <style>
+                                            .cls-1 {
+                                                fill: #e75c52;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g data-name="Слой 2">
+                                        <g data-name="Слой 1">
+                                            <path class="cls-1"
+                                                d="M20.71,7.08H.71a.71.71,0,1,1,0-1.41h20a.71.71,0,1,1,0,1.41Z" />
+                                            <path class="cls-1"
+                                                d="M20.71,7.08a.7.7,0,0,1-.5-.21L14.55,1.21a.7.7,0,0,1,0-1,.7.7,0,0,1,1,0l5.66,5.66a.71.71,0,0,1-.5,1.21Z" />
+                                            <path class="cls-1"
+                                                d="M15.05,12.75a.71.71,0,0,1-.5-1.21l5.66-5.66a.71.71,0,0,1,1,1l-5.66,5.66A.7.7,0,0,1,15.05,12.75Z" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="blue">Разработка на Java. Базовый курс.</td>
+                            <td>6 000 руб.</td>
+                            <td>10.02.2022</td>
+                            <td>
+                                <span class="green"> Ждет оплаты</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="blue">Разработка на Java. Базовый курс.</td>
+                            <td>6 000 руб.</td>
+                            <td>10.02.2022</td>
+                            <td>
+                                <span class="green"> Ждет оплаты</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="content_white">
             <div class="content_container">
                 <h2 class="h2 darkblue">Рекомендовано для Вас</h2>
-
                 <div class="cards_list">
                     <div class="cards_list-item">
                         <h3 class="h3 darkblue">Разработка на Java. Базовый курс.</h3>
@@ -225,7 +218,7 @@
                                     <p class="cards_list-hour-text darkblue">часов онлайн лекций</p>
                                 </div>
                             </div>
-                            <button class="cards_list-btn btn_hover"></button>
+                            <button class="cards_list-btn "></button>
                         </div>
                     </div>
                     <div class="cards_list-item">
@@ -241,11 +234,11 @@
                                     <p class="cards_list-content-left-item-text darkblue">На английском языке</p>
                                 </div>
                             </div>
-                            <button class="cards_list-btn btn_hover"></button>
+                            <button class="cards_list-btn "></button>
                         </div>
                     </div>
                     <div class="cards_list-item">
-                        <h3 class="h3 darkblue">Разработка мобильных приложений под OC Android. Базовый курс.</h3>
+                        <h3 class="h3 darkblue">Разработка мобильных приложений под OC Android. Продвинутый курс.</h3>
                         <div class="cards_list-content">
                             <div class="cards_list-content-left">
                                 <div class="cards_list-content-left-item">
@@ -257,7 +250,7 @@
                                     <p class="cards_list-content-left-item-text darkblue">практических заданий</p>
                                 </div>
                             </div>
-                            <button class="cards_list-btn btn_hover"></button>
+                            <button class="cards_list-btn "></button>
                         </div>
                     </div>
                     <div class="cards_list-item">
@@ -277,11 +270,11 @@
                                     <p class="cards_list-content-left-item-text darkblue">На английском языке</p>
                                 </div>
                             </div>
-                            <button class="cards_list-btn btn_hover"></button>
+                            <button class="cards_list-btn "></button>
                         </div>
                     </div>
                     <div class="cards_list-item">
-                        <h3 class="h3 darkblue">Разработка на Java. Базовый курс.</h3>
+                        <h3 class="h3 darkblue">Старт в DevOps: системное администрирование для начинающих.</h3>
                         <div class="cards_list-content">
                             <div class="cards_list-content-left">
                                 <div class="cards_list-content-left-item">
@@ -289,11 +282,11 @@
                                     <p class="cards_list-hour-text darkblue">часов онлайн лекций</p>
                                 </div>
                             </div>
-                            <button class="cards_list-btn btn_hover"></button>
+                            <button class="cards_list-btn "></button>
                         </div>
                     </div>
                     <div class="cards_list-item">
-                        <h3 class="h3 darkblue">Разработка мобильных приложений под OC Android. Базовый курс.</h3>
+                        <h3 class="h3 darkblue">Excel + Google Таблицы с нуля до PRO.</h3>
                         <div class="cards_list-content">
                             <div class="cards_list-content-left">
                                 <div class="cards_list-content-left-item">
@@ -305,7 +298,7 @@
                                     <p class="cards_list-content-left-item-text darkblue">практических заданий</p>
                                 </div>
                             </div>
-                            <button class="cards_list-btn btn_hover"></button>
+                            <button class="cards_list-btn "></button>
                         </div>
                     </div>
                 </div>
@@ -443,7 +436,7 @@
     <script src="./libs/swiper/swiper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="./libs/google-translate.js"></script>
-    <script src="./js/cabinet_sing.js"></script>
+    <script src="./js/cabinet_payments.js"></script>
 </body>
 
 </html>

@@ -202,11 +202,8 @@ $(document).ready(function () {
   if (window.innerWidth > 1200) {
     initSlider();
   }
-
   $('.slider').slick({
-    slidesToShow: 4,
     slidesToScroll: 1,
-    draggable: false,
     infinite: true,
     prevArrow: "<button type='button' class='slick-arrow slick-prev'></button>",
     nextArrow: "<button type='button' class='slick-arrow slick-next'></button>",
@@ -243,14 +240,15 @@ $(document).ready(function () {
     else e.currentTarget.firstElementChild.innerText = 'Связаться';
   });
 
-  $('.btn_hover').hover(
+  $('.custom__slider-item').hover(
     function () {
-      $(this)[0].offsetParent.classList.add('hover');
+      $(this)[0].classList.add('hover');
     },
     function () {
-      $(this)[0].offsetParent.classList.remove('hover');
+      $(this)[0].classList.remove('hover');
     },
   );
+
   $('.tabs_list-item').click(function (e) {
     e.preventDefault();
 

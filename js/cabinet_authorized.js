@@ -10,7 +10,7 @@ $(document).ready(function () {
       {
         breakpoint: 1600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
       {
@@ -20,6 +20,19 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+  $('.cards_list-item').hover(
+    function () {
+      $(this)[0].classList.add('hover');
+    },
+    function () {
+      $(this)[0].classList.remove('hover');
+    },
+  );
+  $('.communication').on('click', (e) => {
+    $('.communication, .modal').toggleClass('active');
+    if (e.currentTarget.innerText === 'Связаться') e.currentTarget.firstElementChild.innerText = '';
+    else e.currentTarget.firstElementChild.innerText = 'Связаться';
   });
   const setGridLength = (classItem, classList, property) => {
     const items = Array.from(document.querySelectorAll(classItem));
