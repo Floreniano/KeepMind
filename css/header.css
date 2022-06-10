@@ -68,6 +68,20 @@ body.content-view .header__inner::after {
     margin-left: 20px;
 }
 
+.translate {
+    text-transform: uppercase;
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+    cursor: pointer;
+    padding-bottom: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.translate.white {
+    color: var(--white);
+    border-color: var(--white);
+}
+
 .header__list {
     display: flex;
     margin-left: 30px;

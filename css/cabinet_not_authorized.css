@@ -77,21 +77,32 @@
 
 .nav_list {
     display: flex;
-    padding: 15px 0 15px 50px;
+    padding: 15px 0 5px 50px;
     border-bottom: 1px solid #000;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.nav_list-item+.nav_list-item {
-    margin-left: 30px;
+.nav_list-item {
+    margin: 0 15px 10px 0;
 }
 
 .nav_list-link {
     transition: all 0.3s ease-in-out;
 }
 
+.nav_list-link.selected {
+    color: var(--blue);
+}
+
 .nav_list-link:hover {
     color: var(--blue);
+}
+
+@media (max-width:768px) {
+    .nav_list {
+        padding: 15px 0 5px 20px;
+    }
 }
 
 /* navigation */
@@ -218,33 +229,35 @@
     overflow: hidden;
 }
 
-.slider.empty {
+.slick-list {
     position: relative;
 }
 
-.slider.empty::after {
+.slider.empty .slick-list::after {
     position: absolute;
     content: "У вас пока нет сертификатов";
     top: 50%;
-    left: 37%;
-    transform: translate(-37%, -50%);
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
     font-size: 28px;
     z-index: 1;
 }
 
-.slider.empty::before {
+.slider.empty .slick-list::before {
     position: absolute;
     content: "Чтобы получить сертификат нужно пройти курс";
     top: 60%;
-    left: 37%;
-    transform: translate(-37%, -60%);
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -60%);
     font-size: 16px;
     z-index: 2;
 }
 
 .slider_empty {
+    width: 200px;
     height: 250px;
-    width: 1px;
     background-color: var(--white);
     margin: 15px 20px 0 0;
 }
@@ -283,7 +296,6 @@
 .content_gray {
     background-color: var(--gray);
     padding: 70px 0px 70px 0;
-    display: flex;
 }
 
 .content_gray .content_container {
@@ -292,8 +304,7 @@
 }
 
 .content_gray-left {
-    max-width: 25%;
-    margin-right: 100px;
+    margin-right: 80px;
 }
 
 .content_gray-left-text {
@@ -372,6 +383,10 @@
     transition: all 0.5s ease-in-out;
 }
 
+.cards_list-item h3 {
+    font-size: calc(1vw + 20px);
+}
+
 .cards_list-item.hover {
     clip-path: polygon(0 0, 100% 0%, 105% 16%, 101% 0%, 100% 100%, 0 100%);
 }
@@ -379,8 +394,8 @@
 .cards_list-btn {
     background-color: var(--white);
     border-radius: 50%;
-    width: 65px;
-    height: 65px;
+    min-width: 65px;
+    min-height: 65px;
     border: none;
     transition: all 0.4s ease-in-out;
     background-image: url('../assets/SVG/arrow_off.svg');
@@ -447,6 +462,16 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .content_gray .content_container {
+        flex-direction: column;
+    }
+
+    .content_gray-left {
+        margin: 0 0 30px 0;
+    }
+}
+
 @media (max-width: 1100px) {
     .content-info-list {
         flex-direction: column;
@@ -455,5 +480,26 @@
 
     .content-info-list-item+.content-info-list-item {
         margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .slider.empty .slick-list::before {
+        font-size: calc(1vw + 9px);
+        width: 100%;
+        white-space: initial;
+        top: 75%;
+        transform: translate(-50%, -75%);
+        text-align: center;
+    }
+
+    .slider.empty .slick-list::after {
+        font-size: calc(1vw + 13px);
+        width: 100%;
+        white-space: initial;
+        top: 45%;
+        transform: translate(-50%, -45%);
+        text-align: center;
     }
 }

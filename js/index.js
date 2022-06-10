@@ -1,3 +1,4 @@
+import request from './request.js';
 $(document).ready(function () {
   const animateElements = document.querySelectorAll('.animate');
   window.addEventListener('scroll', animScroll);
@@ -105,12 +106,14 @@ $(document).ready(function () {
         const header = document.querySelector('.header');
         const logo = document.querySelector('.header_logo-img');
         const logoFixed = document.querySelector('.content-fixed-kkep-img');
+        const translate = document.querySelector('.translate');
 
         header.classList.add('white');
         swiperPagination.classList.add('white');
         logo.src = './assets/SVG/logo_2.svg';
         contentFixed.classList.add('white');
         logoFixed.classList.add('white');
+        translate.classList.add('white');
       }
     }
 
@@ -167,6 +170,7 @@ $(document).ready(function () {
       const header = document.querySelector('.header');
       const logo = document.querySelector('.header_logo-img');
       const logoFixed = document.querySelector('.content-fixed-kkep-img');
+      const translate = document.querySelector('.translate');
 
       // Скрол на первый слайд
       if (swipeSlide.ariaLabel[0] === `1`) {
@@ -188,6 +192,7 @@ $(document).ready(function () {
           logo.src = './assets/SVG/logo_2.svg';
           contentFixed.classList.add('white');
           logoFixed.classList.add('white');
+          translate.classList.add('white');
         }, 400);
       } else {
         header.classList.remove('white');
@@ -195,6 +200,7 @@ $(document).ready(function () {
         logo.src = './assets/SVG/logo_1.svg';
         contentFixed.classList.remove('white');
         logoFixed.classList.remove('white');
+        translate.classList.remove('white');
       }
     });
   }
@@ -202,21 +208,6 @@ $(document).ready(function () {
   if (window.innerWidth > 1200) {
     initSlider();
   }
-  $('.slider').slick({
-    slidesToScroll: 1,
-    infinite: true,
-    prevArrow: "<button type='button' class='slick-arrow slick-prev'></button>",
-    nextArrow: "<button type='button' class='slick-arrow slick-next'></button>",
-    variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          draggable: true,
-        },
-      },
-    ],
-  });
 
   $('.adaptive_menu').on('click', () => {
     $('.adaptive_menu, .adaptive_back').toggleClass('active');
@@ -268,4 +259,93 @@ $(document).ready(function () {
   setGridLength('.tabs_list-item', '.tabs_list', '--columns');
   setGridLength('.footer_directions_list-item', '.footer_directions_list', '--directions');
   setGridLength('.footer_about_list-item', '.footer_about_list', '--abouts');
+
+  //
+  request('courses/get_all_directions.php', 'GET')
+    .then((data) => {
+      let dataItems = '';
+      data.directions.forEach((item) => {
+        dataItems += `
+      <div class="custom__slider-item">
+        <img class="custom__slider-item-image" src="https://www.keep-mind.ru/zNHQH2fR3avX9VGdal59${item.photo}"
+            alt="Направление">
+        <h3 class="h3 custom__slider-item-title">${item.title}</h3>
+        <p class="custom__slider-item-text">${item.description}.</p>
+        <div class="custom__slider-count">
+            <div class="custom__slider-count-content">
+                <span class="custom__slider-count-number red">${item.count_courses}</span>
+                <span class="custom__slider-count-text">профессии</span>
+            </div>
+            <button class="custom__slider-btn btn_hover"></button>
+        </div>
+    </div>`;
+      });
+      const directions = document.querySelector('.slider-directions');
+      directions.innerHTML = dataItems;
+      dataItems = '';
+    })
+    .then(() => {
+      request('employeers/get_all_employeers.php', 'GET')
+        .then((data) => {
+          let dataItems = '';
+          data.employeers.forEach((item) => {
+            dataItems += `
+          <div class="specialists_slider-item">
+            <img src="https://www.keep-mind.ru/zNHQH2fR3avX9VGdal59${item.photo}" alt="Специалист" class="specialists_slider-img">
+            <div class="specialist_bottom">
+              <div class="specialist_text darkblue">
+                <span class="specialist_name">${item.name} ${item.surname}</span>
+                <span class="specialist_description">${item.qualification}</span>
+              </div>
+                <button class="custom__slider-btn"></button>
+            </div>
+          </div>`;
+          });
+          const specialists = document.querySelector('.specialists-slider');
+          const specialistsQuestions = document.querySelector('.specialists_slider-questions');
+          specialists.innerHTML = dataItems;
+          specialistsQuestions.innerHTML = dataItems;
+          dataItems = '';
+        })
+        .then(() => {
+          request('courses/get_all_promotions.php', 'GET')
+            .then((data) => {
+              let dataItems = '';
+              data.promotions.forEach((item) => {
+                dataItems += `
+            <div class="custom__slider-item">
+              <img class="custom__slider-item-image" src="https://www.keep-mind.ru/zNHQH2fR3avX9VGdal59${item.photo}" alt="Сертификат">
+              <h3 class="h3 custom__slider-item-title">${item.title}</h3>
+              <div class="custom__slider-count">
+                <div class="custom__slider-content">
+                  <p class="custom__slider-content-description">Скидка -20%</p>
+                  <p class="custom__slider-content-date">к Новому году</p>
+                </div>
+                <button class="custom__slider-btn btn_hover"></button>
+              </div>
+            </div>`;
+              });
+              const events = document.querySelector('.events_slider');
+              events.innerHTML = dataItems;
+              dataItems = '';
+            })
+            .then(() => {
+              $('.slider').slick({
+                slidesToScroll: 1,
+                infinite: true,
+                prevArrow: "<button type='button' class='slick-arrow slick-prev'></button>",
+                nextArrow: "<button type='button' class='slick-arrow slick-next'></button>",
+                variableWidth: true,
+                responsive: [
+                  {
+                    breakpoint: 1024,
+                    settings: {
+                      draggable: true,
+                    },
+                  },
+                ],
+              });
+            });
+        });
+    });
 });

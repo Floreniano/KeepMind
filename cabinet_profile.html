@@ -131,16 +131,16 @@
                 <nav class="nav">
                     <ul class="nav_list">
                         <li class="nav_list-item">
-                            <a href="" class="nav_list-link">Основная</a>
+                            <a href="./cabinet_authorized.html" class="nav_list-link">Основная</a>
                         </li>
                         <li class="nav_list-item">
-                            <a href="" class="nav_list-link">Курсы</a>
+                            <a href="./cabinet_cources.html" class="nav_list-link">Курсы</a>
                         </li>
                         <li class="nav_list-item">
-                            <a href="" class="nav_list-link">Платежи</a>
+                            <a href="./cabinet_payments.html" class="nav_list-link">Платежи</a>
                         </li>
                         <li class="nav_list-item">
-                            <a href="" class="nav_list-link">Настройки профиля</a>
+                            <a href="./cabinet_profile.html" class="nav_list-link selected">Настройки профиля</a>
                         </li>
                         <li class="nav_list-item">
                             <a href="" class="nav_list-link">Верификация</a>
@@ -177,6 +177,15 @@
                     <input class="input column-3-input" id="email"></input>
                     <input class="input column-3-input" id="country"></input>
                     <input class="input column-3-input" id="city"></input>
+                    <div class="upper-logo-wrapper adaptive">
+                        <div class="upper-logo">
+                            <img class="upper-logo-img" src="./assets/1x/camera.png" alt="">
+                            <button class="styleClass" onclick="document.getElementById('file').click()">
+                                Добавить фото профиля
+                            </button>
+                            <input type='file' style="display:none" id="file" accept=".jpg, .jpeg, .png">
+                        </div>
+                    </div>
                     <div class="radio-buttons">
                         <input type="radio" class="radio" id="radio-female" name="genus">
                         <label for="radio-female" class="label-female">
@@ -308,9 +317,9 @@
                 </div>
             </div>
 
-            <div class="content_item">
+            <div class="content_item password">
                 <div class="column-1">
-                    <h3 class="h3 darkblue">Изменение<br />пароля</h3>
+                    <h3 class="h3 darkblue">Изменение<br /> пароля</h3>
                 </div>
                 <div class="column-2">
                     <ul class="column-2_list">
@@ -329,7 +338,7 @@
                 </div>
             </div>
 
-            <div class="content_item">
+            <div class="content_item socials">
                 <div class="column-1">
                     <h3 class="h3 darkblue">Социальные<br />сети</h3>
                 </div>

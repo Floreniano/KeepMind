@@ -100,21 +100,32 @@
 
 .nav_list {
     display: flex;
-    padding: 15px 0 15px 50px;
+    padding: 15px 0 5px 50px;
     border-bottom: 1px solid #000;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.nav_list-item+.nav_list-item {
-    margin-left: 30px;
+.nav_list-item {
+    margin: 0 15px 10px 0;
 }
 
 .nav_list-link {
     transition: all 0.3s ease-in-out;
 }
 
+.nav_list-link.selected {
+    color: var(--blue);
+}
+
 .nav_list-link:hover {
     color: var(--blue);
+}
+
+@media (max-width:768px) {
+    .nav_list {
+        padding: 15px 0 5px 20px;
+    }
 }
 
 /* navigation */
