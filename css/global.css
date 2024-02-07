@@ -47,14 +47,6 @@ textarea {
     resize: none;
 }
 
-section {
-    padding-top: 150px;
-    padding-left: 50px;
-    margin-left: 400px;
-    border-left: 1px solid black;
-    height: 100%;
-}
-
 .back_darkblue section {
     border-left: 1px solid #ffff;
 }
@@ -72,6 +64,7 @@ a {
 .container {
     max-width: 1600px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .text {
@@ -99,11 +92,11 @@ a {
 }
 
 .h1 {
-    font-size: calc(3vw + 24px);
+    font-size: clamp(2rem, 3.5vw, 6rem);
 }
 
 .h2 {
-    font-size: calc(2vw + 24px);
+    font-size: clamp(1.5rem, 2.2vw, 3.5rem);
     font-weight: 600;
 }
 

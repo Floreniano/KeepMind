@@ -134,6 +134,10 @@ body.content-view .header__inner::after {
     cursor: pointer;
 }
 
+.header_translate.white {
+    border-color: var(--white);
+}
+
 .communication {
     margin: 0 15px;
     z-index: 2;
